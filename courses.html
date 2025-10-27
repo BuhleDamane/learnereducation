@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses - Learner Education</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+     <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap"></i> Learner Education
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-login" onclick="showLoginModal()">Login / Sign Up</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section" style="padding: 80px 0;">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 2.5rem;">Professional Courses</h1>
+            <p class="hero-subtitle">Choose from our expert-led courses and start your learning journey today</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+
+            <div class="alert alert-warning text-center mb-5" style="border-radius: 15px; border: none; box-shadow: 0 4px 15px rgba(255,193,7,0.3);">
+                <h4><i class="fas fa-fire"></i> Limited Time Offer!</h4>
+                <p class="mb-0">All courses at special prices! Offer ends in:</p>
+                <div id="globalCountdown" class="timer-display" style="font-size: 2rem; font-weight: 800; margin-top: 10px;">
+                    <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <div class="course-content">
+                            <span class="special-badge"><i class="fas fa-fire"></i> Special Offer</span>
+                            <h3 class="course-title">Paralegal Studies</h3>
+                            <p class="text-muted">Master the fundamentals of legal assistance and paralegal work</p>
+                            <div class="course-info">
+                                <span><i class="fas fa-clock"></i> 20 Hours</span>
+                                <span><i class="fas fa-book"></i> 5 Modules</span>
+                                <span><i class="fas fa-certificate"></i> Certificate</span>
+                            </div>
+                            <div class="price-section">
+                                <span class="original-price">R2,500</span>
+                                <span class="special-price">R999</span>
+                            </div>
+                            <button class="btn-enroll" onclick="enrollCourse('paralegal')">
+                                <i class="fas fa-graduation-cap"></i> Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="course-content">
+                            <span class="special-badge"><i class="fas fa-fire"></i> Special Offer</span>
+                            <h3 class="course-title">Digital Marketing</h3>
+                            <p class="text-muted">Learn modern digital marketing strategies and techniques</p>
+                            <div class="course-info">
+                                <span><i class="fas fa-clock"></i> 20 Hours</span>
+                                <span><i class="fas fa-book"></i> 5 Modules</span>
+                                <span><i class="fas fa-certificate"></i> Certificate</span>
+                            </div>
+                            <div class="price-section">
+                                <span class="original-price">R2,500</span>
+                                <span class="special-price">R999</span>
+                            </div>
+                            <button class="btn-enroll" onclick="enrollCourse('digitalmarketing')">
+                                <i class="fas fa-graduation-cap"></i> Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="course-content">
+                            <span class="special-badge"><i class="fas fa-fire"></i> Special Offer</span>
+                            <h3 class="course-title">Web Development</h3>
+                            <p class="text-muted">Build modern websites from scratch with HTML, CSS, and JavaScript</p>
+                            <div class="course-info">
+                                <span><i class="fas fa-clock"></i> 20 Hours</span>
+                                <span><i class="fas fa-book"></i> 5 Modules</span>
+                                <span><i class="fas fa-certificate"></i> Certificate</span>
+                            </div>
+                            <div class="price-section">
+                                <span class="original-price">R2,500</span>
+                                <span class="special-price">R999</span>
+                            </div>
+                            <button class="btn-enroll" onclick="enrollCourse('webdevelopment')">
+                                <i class="fas fa-graduation-cap"></i> Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="course-content">
+                            <span class="special-badge"><i class="fas fa-fire"></i> Special Offer</span>
+                            <h3 class="course-title">Graphic Design</h3>
+                            <p class="text-muted">Create stunning visual designs for print and digital media</p>
+                            <div class="course-info">
+                                <span><i class="fas fa-clock"></i> 20 Hours</span>
+                                <span><i class="fas fa-book"></i> 5 Modules</span>
+                                <span><i class="fas fa-certificate"></i> Certificate</span>
+                            </div>
+                            <div class="price-section">
+                                <span class="original-price">R2,500</span>
+                                <span class="special-price">R999</span>
+                            </div>
+                            <button class="btn-enroll" onclick="enrollCourse('graphicdesign')">
+                                <i class="fas fa-graduation-cap"></i> Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="course-card">
+                        <div class="course-image">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="course-content">
+                            <span class="special-badge"><i class="fas fa-fire"></i> Special Offer</span>
+                            <h3 class="course-title">Project Management</h3>
+                            <p class="text-muted">Master project planning, execution, and team leadership</p>
+                            <div class="course-info">
+                                <span><i class="fas fa-clock"></i> 20 Hours</span>
+                                <span><i class="fas fa-book"></i> 5 Modules</span>
+                                <span><i class="fas fa-certificate"></i> Certificate</span>
+                            </div>
+                            <div class="price-section">
+                                <span class="original-price">R2,500</span>
+                                <span class="special-price">R999</span>
+                            </div>
+                            <button class="btn-enroll" onclick="enrollCourse('projectmanagement')">
+                                <i class="fas fa-graduation-cap"></i> Enroll Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-graduation-cap"></i> Learner Education</h5>
+                    <p>Empowering students worldwide with quality online education</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook fa-2x me-3"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-2x me-3"></i></a>
+                        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 Learner Education. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/courses.js"></script>
+</body>
+</html>

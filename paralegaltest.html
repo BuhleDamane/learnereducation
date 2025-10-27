@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralegal Studies - Final Test - Learner Education</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+      <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap"></i> Learner Education
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-login" onclick="showLoginModal()">Login / Sign Up</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="test-container">
+        <div class="text-center mb-5">
+            <h1><i class="fas fa-clipboard-check"></i> Paralegal Studies - Final Test</h1>
+            <p class="lead">Answer all 25 questions. You need 80% or higher to pass.</p>
+            <p class="text-muted">Take your time and read each question carefully.</p>
+        </div>
+
+        <form id="testForm">
+
+            <div class="question-card">
+                <p class="question-text">1. What is the primary role of a paralegal?</p>
+                <label class="option">
+                    <input type="radio" name="q1" value="a" required>
+                    <span>To represent clients in court</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="b">
+                    <span>To provide legal support and assistance to attorneys</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="c">
+                    <span>To make legal decisions independently</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="d">
+                    <span>To serve as a judge in small claims court</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">2. Which of the following is NOT typically a paralegal responsibility?</p>
+                <label class="option">
+                    <input type="radio" name="q2" value="a" required>
+                    <span>Legal research</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="b">
+                    <span>Document preparation</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="c">
+                    <span>Giving legal advice to clients</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="d">
+                    <span>Case file management</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">3. What does "attorney-client privilege" mean?</p>
+                <label class="option">
+                    <input type="radio" name="q3" value="a" required>
+                    <span>Attorneys can share client information with anyone</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="b">
+                    <span>Confidential communications between attorney and client are protected</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="c">
+                    <span>Only attorneys can work on legal cases</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="d">
+                    <span>Clients must pay attorneys in advance</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">4. Which document is used to initiate a civil lawsuit?</p>
+                <label class="option">
+                    <input type="radio" name="q4" value="a" required>
+                    <span>Affidavit</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="b">
+                    <span>Complaint</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="c">
+                    <span>Brief</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="d">
+                    <span>Motion</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">5. What is "discovery" in legal proceedings?</p>
+                <label class="option">
+                    <input type="radio" name="q5" value="a" required>
+                    <span>The process of finding new clients</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="b">
+                    <span>The pre-trial process where parties exchange information</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="c">
+                    <span>The verdict announcement</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="d">
+                    <span>The appeal process</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">6. A paralegal can sign legal documents on behalf of a client:</p>
+                <label class="option">
+                    <input type="radio" name="q6" value="a" required>
+                    <span>True, in all cases</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="b">
+                    <span>False, paralegals cannot sign legal documents for clients</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="c">
+                    <span>Only if the attorney approves</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="d">
+                    <span>Only in criminal cases</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">7. What is a "deposition"?</p>
+                <label class="option">
+                    <input type="radio" name="q7" value="a" required>
+                    <span>A written legal document</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q7" value="b">
+                    <span>Testimony given under oath outside of court</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q7" value="c">
+                    <span>A court order</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q7" value="d">
+                    <span>A legal fee structure</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">8. Which of the following is a type of legal research source?</p>
+                <label class="option">
+                    <input type="radio" name="q8" value="a" required>
+                    <span>Case law</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q8" value="b">
+                    <span>Statutes</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q8" value="c">
+                    <span>Legal journals</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q8" value="d">
+                    <span>All of the above</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">9. What does "pro bono" mean in legal terms?</p>
+                <label class="option">
+                    <input type="radio" name="q9" value="a" required>
+                    <span>For the public good; free legal services</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q9" value="c">
+                    <span>A type of legal document</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q9" value="d">
+                    <span>A court procedure</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">10. In legal citation, what does "Id." mean?</p>
+                <label class="option">
+                    <input type="radio" name="q10" value="a" required>
+                    <span>Identification</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q10" value="b">
+                    <span>The same source as cited immediately before</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q10" value="c">
+                    <span>In different</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q10" value="d">
+                    <span>Invalid document</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">11. What is a "subpoena"?</p>
+                <label class="option">
+                    <input type="radio" name="q11" value="a" required>
+                    <span>A legal fee</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q11" value="b">
+                    <span>A court order requiring someone to testify or produce documents</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q11" value="c">
+                    <span>A type of lawsuit</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q11" value="d">
+                    <span>A legal database</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">12. Which court has the highest authority in most countries?</p>
+                <label class="option">
+                    <input type="radio" name="q12" value="a" required>
+                    <span>District Court</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q12" value="b">
+                    <span>Supreme Court</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q12" value="c">
+                    <span>Family Court</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q12" value="d">
+                    <span>Municipal Court</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">13. What is "litigation"?</p>
+                <label class="option">
+                    <input type="radio" name="q13" value="a" required>
+                    <span>The process of taking legal action through the court system</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q13" value="b">
+                    <span>A type of contract</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q13" value="c">
+                    <span>Legal research</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q13" value="d">
+                    <span>Document filing</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">14. What does "plaintiff" refer to?</p>
+                <label class="option">
+                    <input type="radio" name="q14" value="a" required>
+                    <span>The party who initiates a lawsuit</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q14" value="b">
+                    <span>The defendant's attorney</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q14" value="c">
+                    <span>The judge</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q14" value="d">
+                    <span>The court clerk</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">15. Paralegals must maintain client confidentiality:</p>
+                <label class="option">
+                    <input type="radio" name="q15" value="a" required>
+                    <span>Only during business hours</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q15" value="b">
+                    <span>At all times, as part of their ethical obligation</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q15" value="c">
+                    <span>Only when working on active cases</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q15" value="d">
+                    <span>Unless asked by family members</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">16. What is a "brief" in legal terminology?</p>
+                <label class="option">
+                    <input type="radio" name="q16" value="a" required>
+                    <span>A short meeting</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q16" value="b">
+                    <span>A written legal argument submitted to a court</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q16" value="c">
+                    <span>A quick phone call</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q16" value="d">
+                    <span>A summary email</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">17. Which of the following requires a notary?</p>
+                <label class="option">
+                    <input type="radio" name="q17" value="a" required>
+                    <span>Email correspondence</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q17" value="b">
+                    <span>Affidavits and sworn statements</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q17" value="c">
+                    <span>Legal research notes</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q17" value="d">
+                    <span>Case summaries</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">18. What is "jurisdiction"?</p>
+                <label class="option">
+                    <input type="radio" name="q18" value="a" required>
+                    <span>The authority of a court to hear a case</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q18" value="b">
+                    <span>A type of legal document</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q18" value="c">
+                    <span>The jury's decision</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q18" value="d">
+                    <span>Legal fees</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">19. In legal research, what is "precedent"?</p>
+                <label class="option">
+                    <input type="radio" name="q19" value="a" required>
+                    <span>A previous court decision that guides future cases</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q19" value="b">
+                    <span>The first document filed</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q19" value="c">
+                    <span>A legal database</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q19" value="d">
+                    <span>A court procedure</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">20. What does "statute of limitations" mean?</p>
+                <label class="option">
+                    <input type="radio" name="q20" value="a" required>
+                    <span>The maximum number of cases a lawyer can handle</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q20" value="b">
+                    <span>The time limit for filing a lawsuit</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q20" value="c">
+                    <span>Court operating hours</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q20" value="d">
+                    <span>Legal fee caps</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">21. A paralegal may appear in court:</p>
+                <label class="option">
+                    <input type="radio" name="q21" value="a" required>
+                    <span>To represent clients in any case</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q21" value="b">
+                    <span>Only in limited circumstances as permitted by law</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q21" value="c">
+                    <span>Whenever they choose</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q21" value="d">
+                    <span>Never under any circumstances</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">22. What is "due diligence" in legal work?</p>
+                <label class="option">
+                    <input type="radio" name="q22" value="a" required>
+                    <span>Paying legal fees on time</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q22" value="b">
+                    <span>Thorough investigation and research before taking action</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q22" value="c">
+                    <span>Filing documents quickly</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q22" value="d">
+                    <span>Meeting court deadlines</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">23. Which document formally responds to a complaint in a lawsuit?</p>
+                <label class="option">
+                    <input type="radio" name="q23" value="a" required>
+                    <span>Summons</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q23" value="b">
+                    <span>Answer</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q23" value="c">
+                    <span>Motion</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q23" value="d">
+                    <span>Affidavit</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">24. What is "billable hours"?</p>
+                <label class="option">
+                    <input type="radio" name="q24" value="a" required>
+                    <span>Court operating hours</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q24" value="b">
+                    <span>Time spent on client work that can be charged</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q24" value="c">
+                    <span>Office hours</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q24" value="d">
+                    <span>Lunch breaks</span>
+                </label>
+            </div>
+
+            <div class="question-card">
+                <p class="question-text">25. Ethical rules for paralegals require them to:</p>
+                <label class="option">
+                    <input type="radio" name="q25" value="a" required>
+                    <span>Work independently without supervision</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q25" value="b">
+                    <span>Maintain competence, integrity, and confidentiality</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q25" value="c">
+                    <span>Take on as many clients as possible</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q25" value="d">
+                    <span>Share client information for marketing purposes</span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn-submit-test">
+                <i class="fas fa-check-circle"></i> Submit Test
+            </button>
+        </form>
+    </div>
+
+    <div class="result-modal" id="resultModal">
+        <div class="result-content">
+            <div class="result-icon" id="resultIcon">
+                <i class="fas fa-trophy"></i>
+            </div>
+            <h2 id="resultTitle">Congratulations!</h2>
+            <p class="lead" id="resultMessage">You passed the test!</p>
+            <h3 id="resultScore">Score: 85%</h3>
+            <p class="mt-3">You need 80% or higher to pass.</p>
+            <div class="mt-4">
+                <button class="btn btn-primary-custom me-2" id="certificateBtn" onclick="goToCertificate()">
+                    <i class="fas fa-download"></i> Download Certificate
+                </button>
+                <button class="btn btn-outline-primary" onclick="retakeTest()">
+                    <i class="fas fa-redo"></i> Retake Test
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-graduation-cap"></i> Learner Education</h5>
+                    <p>Empowering students worldwide with quality online education</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook fa-2x me-3"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-2x me-3"></i></a>
+                        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 Learner Education. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/test.js"></script>
+</body>
+</html>

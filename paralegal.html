@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralegal Studies - Module - Learner Education</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-graduation-cap"></i> Learner Education
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-login" onclick="showLoginModal()">Login / Sign Up</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="module-container">
+
+        <div class="module-header">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                    <h2>Paralegal Studies</h2>
+                    <p class="text-muted mb-0">Module <span id="currentModule">1</span> of 5</p>
+                </div>
+                <a href="courses.html" class="btn btn-outline-primary">
+                    <i class="fas fa-arrow-left"></i> Back to Courses
+                </a>
+            </div>
+            
+            <div class="progress" style="height: 10px;">
+                <div class="progress-bar" id="courseProgress" role="progressbar" style="width: 0%"></div>
+            </div>
+            <p class="text-muted mt-2 mb-0"><span id="progressPercent">0</span>% Complete</p>
+        </div>
+
+        <div class="module-content">
+            <h3 id="moduleTitle">Module 1: Introduction to Paralegal Work</h3>
+            <p class="text-muted mb-4" id="moduleDescription">Understanding the role and responsibilities of a paralegal in the legal system</p>
+
+            <div class="video-placeholder mb-4">
+                <i class="fas fa-play-circle"></i>
+                <p class="mt-3">Video: Introduction to Paralegal Studies (15 min)</p>
+                <small class="text-muted">Replace this placeholder with your video embed</small>
+            </div>
+
+            <div class="mb-4">
+                <h4>What You'll Learn</h4>
+                <div class="row mt-4" id="imagesContainer">
+
+                    <div class="col-md-4 mb-4">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p class="mt-2 mb-0">Image 1</p>
+                        </div>
+                        <p class="mt-2"><strong>Legal Documentation</strong></p>
+                        <p class="text-muted">Learn about different types of legal documents and how to prepare them.</p>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p class="mt-2 mb-0">Image 2</p>
+                        </div>
+                        <p class="mt-2"><strong>Legal Research</strong></p>
+                        <p class="text-muted">Master the skills needed for effective legal research and analysis.</p>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p class="mt-2 mb-0">Image 3</p>
+                        </div>
+                        <p class="mt-2"><strong>Client Communication</strong></p>
+                        <p class="text-muted">Develop professional communication skills for working with clients.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h4>Module Overview</h4>
+                <p>Paralegals play a crucial role in the legal system by providing essential support to lawyers and legal teams. In this module, you will learn about the fundamental responsibilities of a paralegal, including legal research, document preparation, client interaction, and case management.</p>
+                
+                <p>Throughout this course, you'll develop practical skills that are directly applicable to real-world legal environments. You'll understand the ethical considerations that govern paralegal work and learn how to maintain professional standards in all aspects of your role.</p>
+
+                <h5 class="mt-4">Key Topics Covered:</h5>
+                <ul>
+                    <li>Role and responsibilities of a paralegal</li>
+                    <li>Legal terminology and documentation</li>
+                    <li>Research methods and legal databases</li>
+                    <li>Client confidentiality and ethics</li>
+                    <li>Case management procedures</li>
+                </ul>
+            </div>
+
+            <div class="timer-box">
+                <h4><i class="fas fa-clock"></i> Module Timer</h4>
+                <p class="mb-2">Please spend at least 25 minutes on this module</p>
+                <div class="timer-display-large" id="moduleTimer">25:00</div>
+                <p class="mt-2 mb-0" id="timerStatus">Timer running...</p>
+            </div>
+
+            <div class="module-navigation mt-4">
+                <button class="btn-nav btn-prev" id="prevBtn" onclick="previousModule()">
+                    <i class="fas fa-arrow-left"></i> Previous Module
+                </button>
+                <button class="btn-nav btn-next" id="nextBtn" disabled onclick="nextModule()">
+                    Next Module <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="completionCard" style="display: none;">
+            <div class="module-content text-center">
+                <div class="feature-icon mx-auto mb-4" style="width: 100px; height: 100px; font-size: 3rem;">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>Congratulations!</h3>
+                <p class="lead">You've completed all modules. You're now ready to take the final test.</p>
+                <button class="btn btn-primary-custom btn-lg" onclick="goToTest()">
+                    <i class="fas fa-pen"></i> Take Final Test
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-graduation-cap"></i> Learner Education</h5>
+                    <p>Empowering students worldwide with quality online education</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook fa-2x me-3"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-2x me-3"></i></a>
+                        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 Learner Education. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/module.js"></script>
+</body>
+</html>
